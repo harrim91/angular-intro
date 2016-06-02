@@ -5,6 +5,7 @@ toDoApp.factory('ToDoFactory', function() {
   };
 
   ToDo.prototype.complete = function() {
+    console.log('hello');
     this.completed = true;
   };
 

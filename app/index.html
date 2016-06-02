@@ -12,8 +12,8 @@
     <div id="todos" ng-controller="ToDoController as ctrl">
       <li ng-repeat="todo in ctrl.todos">
         Name: {{ todo.name }}, Complete: {{ todo.completed }}
-        <button class="btn-complete" value="Complete"/>
-        <button class="btn-delete" value="Delete" ng-click="ctrl.deleteToDo($index)"/>
+        <button class="btn-complete" ng-click="todo.complete()">Complete</button>
+        <button class="btn-delete" ng-click="ctrl.deleteToDo($index)"/>Delete</button>
       </li>
       <input type="text" id="new-todo" placeholder="Add new todo" ng-model="toDoName"/>
       <button class="btn-add" value="Add" ng-click="ctrl.addToDo(toDoName)"/>
